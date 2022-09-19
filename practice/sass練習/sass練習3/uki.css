@@ -1,0 +1,21 @@
+.boxNormal {
+  width: 33.3333333333px;
+}
+
+.boxCeil {
+  width: 34px;
+}
+
+.boxFloor {
+  width: 33px;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+.container h1 {
+  background-color: #ccc;
+  margin-left: -20px;
+  padding-left: 20px;
+}/*# sourceMappingURL=uki.css.map */

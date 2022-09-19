@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>おみくじ</title>
+    <style>
+        body {
+            background-color:seagreen
+        }
+        p{
+            text-align: center;
+            font-size: 2em;
+            margin-top:100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       let kujiis = ['大吉','吉','吉','中吉','中吉','小吉','吉','吉','末吉','末吉','凶','大凶'];
+       console.log(kujiis[0]);
+       let kuji = Math.floor(Math.random()*kujiis.length);
+        console.log(kuji);
+        document.write('<p>あなたの運勢は、' + kujiis[kuji] + 'です</p>');
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+.done {
+    text-decoration: line-through;
+}
+    </style>
+</head>
+
+<body>
+    <ul></ul>
+    <input id="new-todo" type="text"><button id="add-button">add</button>
+    <script>
+        const button = document.getElementById('add-button');
+        button.addEventListener('click', () => {
+            const input = document.getElementById('new-todo');
+
+            const li = document.createElement('li');
+            li.innerText = input.value;
+
+            const doneButton = document.createElement('button');
+            doneButton.innerText = 'done';
+            li.appendChild(doneButton);
+
+            doneButton.addEventListener('click', () => {
+                const li = doneButton.closest('li');
+                li.classList.add('done');
+            });
+
+            const ul = document.querySelector('ul');
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

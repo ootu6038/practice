@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text {
+            font-size: 4em;
+            font-weight: bold;
+            color: #165;
+            text-align: center;
+        }
+
+        span {
+            transition: all 300ms 0s ease;
+        }
+
+        .add-blue {
+            font-size: 0.5em;
+            color: #00f;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="text">
+    </p>
+    <script>
+        var p = document.getElementById('text');
+        var textLists = [
+            'loop',
+            'bbb',
+            'super',
+            'aaa'
+        ];
+        var checkTexts = [];
+
+        createText();
+
+        function createText() {
+            var rnd = Math.floor(Math.random() * textLists.length);
+            p.textContent = '';
+            checkTexts = textLists[rnd].split('').map(function (value) {
+                var span = document.createElement('span');
+                span.textContent = value;
+                p.appendChild(span);
+
+                return span;
+            });
+        }
+
+
+        console.log(checkTexts);
+
+        document.addEventListener('keydown', keyDown);
+        function keyDown(e) {
+            if (e.key === checkTexts[0].textContent) {
+                checkTexts[0].className = 'add-blue';
+                checkTexts.shift();
+
+                if (!checkTexts.length) createText();
+            }
+        }
+    </script>
+</body>
+
+</html>

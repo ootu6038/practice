@@ -1,0 +1,26 @@
+$width:100px;
+
+.boxNormal {
+    width: $width / 3;
+}
+
+.boxCeil {
+    width: ceil($width / 3);
+}
+
+.boxFloor {
+    width: floor($width / 3);
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    $margin: -20px;
+
+    h1 {
+        background-color: #ccc;
+        margin-left: $margin;
+        padding-left: abs($margin);
+        text-shadow: 1px 1px 1px rgba(black .3);
+    }
+}

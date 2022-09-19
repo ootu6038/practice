@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="name">お名前</label>
+        <input type="text" id="name">
+    </form>
+
+    <form action="">
+        <input type="password" name="myname">
+
+        <textarea name="message"></textarea>
+
+        <select name="pref" size="5" multiple>
+            <option value="北海道">北海道</option>
+            <option value="岩手">岩手</option>
+            <option value="青森">青森</option>
+        </select>
+
+        <ul>
+            <li><input type="checkbox" name="pref" value="北海道">北海道</li>
+        </ul>
+        お名前:
+        <input type="text" name="myname" placeholder="例)藤原和樹">
+
+        <p>条文に同意しますか？</p>
+        <label><input type="checkbox" name="agree" value="yes">同意します</label>
+
+        <ul>
+            <li><label><input type="radio" name="color" value="赤" checked>赤
+                </label></li>
+            <li><label><input type="radio" name="color" value="青">青
+                </label></li>
+            <li><label><input type="radio" name="color" value="黄">黄
+                </label></li>
+            <li><label><input type="radio" name="color" value="">選択しない
+                </label></li>
+
+        </ul>
+        <p><button type="submit">
+                送信する
+                <button type="reset">リセット</button>
+            </button>
+        </p>
+        </select>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    画面を12個分割し、そのうちの何カラムを使用するかを指定します。
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5" style="background-color:lightblue;">col-5</div>
+            <div class="col-4" style="background-color:lightgreen;">col-4</div>
+            <div class="col-3" style="background-color:lightblue;">col-3</div>
+        </div>
+    </div>
+
+    12未満の場合は、左詰めになります。
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5" style="background-color:lightblue;">col-5</div>
+            <div class="col-3" style="background-color:lightgreen;">col-3</div>
+            <div class="col-3" style="background-color:lightblue;">col-3</div>
+        </div>
+    </div>
+
+    12を超える場合は、複数行になります。
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5" style="background-color:lightblue;">col-5</div>
+            <div class="col-5" style="background-color:lightgreen;">col-5</div>
+            <div class="col-5" style="background-color:lightblue;">col-5</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row justify-content-start">
+            <div class="my-box col-auto" style="background-color:lightblue;">col1</div>
+            <div class="my-box col-auto" style="background-color:lightgreen;">col2</div>
+            <div class="my-box col-auto" style="background-color:lightblue;">col3</div>
+        </div><br>
+        <div class="row justify-content-center">
+            <div class="my-box col-auto" style="background-color:lightblue;">col1</div>
+            <div class="my-box col-auto" style="background-color:lightgreen;">col2</div>
+            <div class="my-box col-auto" style="background-color:lightblue;">col3</div>
+        </div><br>
+        <div class="row justify-content-end">
+            <div class="my-box col-auto" style="background-color:lightblue;">col1</div>
+            <div class="my-box col-auto" style="background-color:lightgreen;">col2</div>
+            <div class="my-box col-auto" style="background-color:lightblue;">col3</div>
+        </div><br>
+        <div class="row justify-content-around">
+            <div class="my-box col-auto" style="background-color:lightblue;">col1</div>
+            <div class="my-box col-auto" style="background-color:lightgreen;">col2</div>
+            <div class="my-box col-auto" style="background-color:lightblue;">col3</div>
+        </div><br>
+        <div class="row justify-content-between">
+            <div class="my-box col-auto" style="background-color:lightblue;">col1</div>
+            <div class="my-box col-auto" style="background-color:lightgreen;">col2</div>
+            <div class="my-box col-auto" style="background-color:lightblue;">col3</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

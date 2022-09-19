@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            position: relative;
+        }
+        #btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 80px;
+            height: 50px;
+        }
+
+        #canvas {
+            background-color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">クリア</button>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        var btn = document.getElementById('btn');
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        var mousex, mousey;
+        var state = false;
+        var color = 0;
+        canvas.width = window.innerWidth - 2;
+        canvas.height = window.innerHeight - 2;
+
+
+        ctx.lineCap = 'round';
+
+        canvas.addEventListener('mousemove', mouseMove);
+        canvas.addEventListener('mousedown', mouseDown);
+        canvas.addEventListener('mouseup', mouseUp);
+        btn.addEventListener('click', clearBtn);
+        function clearBtn() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+        }
+        function mouseDown(e) {
+            mousex = e.clientX;
+            mousey = e.clientY;
+            state = true;
+        }
+
+        function mouseUp() {
+            state = false;
+        }
+
+        function mouseMove(e) {
+            if (!state) return;
+            var w = Math.random() * 51;
+            ctx.lineWidth = w;
+
+            color++;
+            ctx.strokeStyle = 'hsl(' + color + ',100%,50%)';
+            ctx.beginPath();
+            ctx.moveTo(mousex, mousey);
+            ctx.lineTo(e.clientX, e.clientY);
+            ctx.stroke();
+            mousex = e.clientX;
+            mousey = e.clientY;
+
+        }
+
+    </script>
+</body>
+
+</html>

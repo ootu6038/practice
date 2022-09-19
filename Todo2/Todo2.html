@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Todo1 <button>done</button></li>
+        <li>Todo2 <button>done</button></li>
+        <li>Todo3 <button>done</button></li>
+    </ul>
+
+    <script>
+    const buttonList = document.querySelectorAll('button');
+    [...buttonList].forEach((button) => {
+        button.addEventListener('click' , () => {
+
+       
+        const li = button.closest('li');
+        li.classList.add('done');
+    });
+    });
+
+    //    const li = document.querySelector('li');
+    //    button.addEventListener('click', () => {
+    //        li.classList.add('done');
+     //   });
+
+    </script>
+</body>
+
+</html>

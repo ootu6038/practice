@@ -1,0 +1,72 @@
+$primary-color:rgb(1, 109, 48);
+$btn-width:600px;
+.container {
+    h1 {
+        color: $primary-color;
+        font-size: 91px;
+        background-color: green;
+
+        @media screen and (max-width: 760px) {
+            font-size: .8em;
+        }
+
+        margin: {
+            bottom: 10px;
+            left: 10px;
+        }
+    }
+}
+
+p {
+    color: blue;
+}
+
+a {
+    color: rgb(174, 255, 0);
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+.btn {
+    color:#fff;
+    background-color: $primary-color;
+    padding: 5px 10px;
+    text-decoration: none;
+    width: $btn-width;
+    display:inline-block;
+    text-align: center;
+    
+    &.btn-large {
+width: $btn-width*2;
+    }
+
+    &.btn-small {
+        width:$btn-width / 2;
+    }
+}
+@mixin align-center($margin: 3px) {
+    display: block;
+    margin: $margin auto;
+}
+
+@mixin mq($width: 680px) {
+    @media only screen and (max-width:$width){
+        @content;
+    }
+}
+.box {
+    width: 100px;
+    margin: 0 auto;
+}
+img {
+    @include align-center(40px);
+    @include mq {
+        margin: 0;
+    }
+}
+button {
+    @include align-center(10px);
+}
